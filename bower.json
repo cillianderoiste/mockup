@@ -6,7 +6,7 @@
     "ace-builds": "1.1.1",
     "backbone": "1.1.0",
     "backbone.paginator": "0.8.1",
-    "bootstrap": "3.0.3",
+    "bootstrap": "3.1.0",
     "console-polyfill": "0.1.0",
     "domready": "7f34949ce7453010c4984fb950eaeb5cfc583f94",
     "dropzone": "3.8.3",
