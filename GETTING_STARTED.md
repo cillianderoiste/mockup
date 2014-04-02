@@ -1,12 +1,11 @@
 # Before We Begin
 
-To build and hack on Mockup you will need recent versions of git, node, npm and
-make.
+To build and hack on Mockup you will need recent versions of git, node, npm and make.
 
 Right now development of this project is being done primarily on Linux and OS X,
-so setting up the tooling on MS Windows might be an adventure for you to explore
--- though, all of the tools used have equivalent versions for that platform, so
-with a little effort, it should work!
+so setting up the tooling on MS Windows might be an adventure for you to explore --
+though, all of the tools used have equivalent versions for that platform,
+so with a little effort, it should work!
 
 # Clone and Bootstrap
 
@@ -17,7 +16,8 @@ with a little effort, it should work!
 Now you have the complete source code for all Patterns from Mockup.
 From here on you generate bundles of common functionality and minify them.
 
-You're ready to start working on testable, modular and beautiful JavaScript!
+You're ready to start working on testable,
+modular and beautiful JavaScript!
 
 To see it in action, you must compile everything once, with
 
@@ -38,24 +38,21 @@ and then you open index.html with your browser!
 
     * `js/config.js` : Contains the RequireJS configuration
 
-    * `js/bundles` : This is where a bundle is defined -- a bundle is a set of
-      requirements, code that specify the features being packaged and
-      bootstraps your page.
+    * `js/bundles` : This is where a bundle is defined --
+      a bundle is a set of requirements,
+      code that specify the features being packaged and bootstraps your page.
 
     * `js/patterns` : Contains all individual, encapsulated patterns
       e.g. widgets.js
 
- * `less/` : Contains all the [Less](http://lesscss.org/) code for all the
-   patterns and bundles
+ * `less/` : Contains all the [Less](http://lesscss.org/) code for all the patterns and bundles
 
- * `lib/` : Contains external libraries not necessarily found in the bower
-   repositories
+ * `lib/` : Contains external libraries not necessarily found in the bower repositories
 
- * `tests/` : Contains all tests for patterns and bundles, including general
-   setup and configuration code
+ * `tests/` : Contains all tests for patterns and bundles, including general setup and configuration code
 
- * `Gruntfile.js` : Defines the directives for compiling Less, and
-   for combining/optimizing/minimizing JavaScript to the defined bundles
+ * `Gruntfile.js` : Defines the directives for compiling Less,
+   and for combining/optimizing/minimizing JavaScript to the defined bundles
 
  * `index.html` : The main source of documentation for the mockup project
 
@@ -64,18 +61,17 @@ and then you open index.html with your browser!
 
 ## What's a Pattern? What Are Bundles? How do they relate?
 
-`Patterns` are units of JavaScript, defined by a RequireJS/AMD style module.
-Patterns may require other patterns to operate, and may also require third party
-libraries. Think of a pattern as a module -- encapsulated and separate, and
-providing a widget or tool to be used by other patterns or in html.
+`Patterns` are units of JavaScript,
+defined by a RequireJS/AMD style module.
+Patterns may require other patterns to operate,
+and may also require third party libraries.
+Think of a pattern as a module -- encapsulated and separate,
+and providing a widget or tool to be used by other patterns or in html.
 
-`Bundles` are defined in a similar way to <em>Patterns</em> -- they are
-encapsulated bits of JavaScript that define requirements for a bundle and have
-some extra code in them that's useful for integrating the required patterns into
-Plone products.
+`Bundles` are defined in a similar way to *Patterns* --
+they are encapsulated bits of JavaScript that define requirements for a bundle and have some extra code in them that's useful for integrating the required patterns into Plone products.
 
-Have a look at the [HelloWorld](#learn) example to see how to create your own
-Pattern and then how to bundle, test, build and use it.
+Have a look at the [HelloWorld](#learn) example to see how to create your own Pattern and then how to bundle, test, build and use it.
 
 # Bundling
 
@@ -93,15 +89,13 @@ You can run tests with:
 
     make test
 
-This will start a process which runs the tests when you change any of the js
-files.
+This will start a process which runs the tests when you change any of the js files.
 
 If you just want to run tests just once you can use:
 
     make test-once
 
-For debugging, or testing in a chrome browser use the following and open
-[localhost:9876](localhost:9876)
+For debugging, or testing in a chrome browser use the following and open [localhost:9876](localhost:9876)
 
     make test-dev
 
