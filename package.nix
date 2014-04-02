@@ -1469,7 +1469,7 @@ in
     name = "cscodegen-0.1.0";
     src = [
       (fetchgit {
-        url = "git://github.com/michaelficarra/cscodegen.git";
+        url = "git://github.com/michaelficarra/cscodegen.git";fetchSubmodules = false;
         rev = "73fd7202ac086c26f18c9d56f025b18b3c6f5383";
         sha256 = "cb527b00ac305ebc6ab3f59ff4e99def7646b417fdd9e35f0186c8ee41cd0829";
       })

@@ -44,6 +44,15 @@ bootstrap: clean bootstrap-common
 	NODE_PATH=$(NODE_PATH) $(GRUNT) sed:bootstrap
 
 bootstrap-nix: clean bootstrap-common
+	sed -i 's@self.by-version."fsevents"."0.2.0"$$@@' package.nix
+	sed -i 's@url = "git://github.com/michaelficarra/cscodegen.git";$$@url = "git://github.com/michaelficarra/cscodegen.git";fetchSubmodules = false;@' package.nix
+	sed -i '$$ d' bower.nix
+	# echo "]; postBuild = "for p in $paths; do read p_name p_version <<<$(echo $p | sed 's#[^-]*-\\(.*\\)-\\(.*\\)#\\1#'); ln -s $p/packages/*/$p_version $out/$p_name; done";}" >> bower.nix
+	#	cat bower_end.nix >> bower.nix
+	echo $$(\
+	  echo "]; postBuild = \"for p in $paths; do read p_name p_version <<<$$(echo $$p | sed 's#[^-]*-\\(.*\\)-\\(.*\\)#\\1#'); ln -s $$p/packages/*/$$p_version $$out/$$p_name; done\";}" | \
+	  cat bower.nix - \
+	)
 	nix-build default.nix -A build -o nixenv
 	ln -s nixenv/lib/node_modules/mockup/node_modules
 	ln -s nixenv/bower_components
