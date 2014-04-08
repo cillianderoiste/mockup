@@ -64,6 +64,7 @@
       'mockup-patterns-toggle': 'js/patterns/toggle',
       'mockup-patterns-tooltip': 'js/patterns/tooltip',
       'mockup-patterns-tree': 'js/patterns/tree',
+      'mockup-patterns-foggy': 'js/patterns/foggy',
       'mockup-registry': 'bower_components/mockup-core/js/registry',
       'mockup-router': 'js/router',
       'mockup-utils': 'js/utils',
@@ -71,6 +72,7 @@
       'picker': 'bower_components/pickadate/lib/picker',
       'picker.date': 'bower_components/pickadate/lib/picker.date',
       'picker.time': 'bower_components/pickadate/lib/picker.time',
+      'jquery.foggy': 'lib/jquery.foggy.min',
       'react': 'bower_components/react/react',
       'select2': 'bower_components/select2/select2',
       'sinon': 'bower_components/sinonjs/sinon',
@@ -98,6 +100,7 @@
       'mockup-iframe_init': { deps: ['domready'] },
       'picker.date': { deps: [ 'picker' ] },
       'picker.time': { deps: [ 'picker' ] },
+      'jquery.foggy': { },
       'sinon': {exports: 'window.sinon'},
       'tinymce': { exports: 'window.tinyMCE', init: function () { this.tinyMCE.DOM.events.domLoaded = true; return this.tinyMCE; }},
       'underscore': { exports: 'window._' }

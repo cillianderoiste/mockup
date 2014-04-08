@@ -30,7 +30,8 @@ define([
   'mockup-patterns-pickadate',
   'mockup-patterns-relateditems',
   'mockup-patterns-querystring',
-  'mockup-patterns-tinymce'
+  'mockup-patterns-tinymce',
+  'mockup-patterns-stickup'
 ], function($, Registry, Base) {
   'use strict';
 

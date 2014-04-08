@@ -1,7 +1,7 @@
-{ mockup ? { outPath = ./.; name = "mockup"; }
+{ pkgs ? import <nixpkgs> {}
+,  mockup ? { outPath = ./.; name = "mockup"; }
 }:
 let
-  pkgs = import <nixpkgs> {};
   bowerComponents = pkgs.callPackage ./bower.nix { 
     inherit (pkgs) fetchbower buildEnv;
   };
@@ -48,6 +48,7 @@ in rec {
       lcov-result-merger
       less
       mocha
+      react
       requirejs
     ];
     
