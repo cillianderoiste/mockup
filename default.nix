@@ -48,6 +48,7 @@ in rec {
       lcov-result-merger
       less
       mocha
+      react
       requirejs
     ];
     
